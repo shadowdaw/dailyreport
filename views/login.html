@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WanderToHeart - Login</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="/images/w.png" rel="shortcut icon">
+    <link rel="stylesheet" href="/stylesheets/dailyreport.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <div class="container main">
+        <div class="loginForm">
+            <form id="loginForm" action="/doLogin" method="post">
+                <div class="form_group">
+                    <label>UserName:</label>
+                    <input type="text" placeholder="User name" name="username" class="form-control">
+                    <div class="clearfix"></div>
+                </div>
+                <div class="form_group">
+                    <label>Password:</label>
+                    <input type="password" placeholder="Password" name="password" class="form-control">
+                    <div class="clearfix"></div>
+                </div>
+                <div class="form_group">
+                    <a  href="/register" class="btn btn-info pull-left">Register</a>
+                    <button type="submit" class="btn btn-primary pull-right">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="/javascripts/jquery.js"></script>
+    <script src="/javascripts/jquery.form.js"></script>
+    <script src="/javascripts/dawalert.js"></script>
+    <script src="/js/index.js"></script>
+</body>
+
+</html>

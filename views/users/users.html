@@ -1,0 +1,15 @@
+{% extends 'layout-users.html' %} {% block content %}
+<div class="container main">
+    {% for user in users %}
+    <div class="row">
+        <div class="col-sm-3">
+            <p><span>UserName:</span>{{user.username}}</p>
+		</div>
+        <div class="col-sm-4">
+            <p><span>RealName:</span>{{user.realname}}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %} {% block script %}
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="container main">
+    <a href="/reports/newreport" class="btn btn-info">New Report</a>
+    <div class="passage markdown ">
+        <div>
+            <span class="title">
+                最近一次日报:
+            </span>
+            <span class="time pull-right">{{moment(report.createDate).format('YYYY-MM-DD')}}</span>
+        </div>
+        <div class="report">
+            <code>今日完成:</code>
+            <p>
+                {{report.done}}
+            </p>
+            <code>遇到困难:</code>
+            <p class="">
+                {{report.difficulty}}
+            </p>
+            <code>个人成长:</code>
+            <p class="">
+                {{report.progress}}
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %} {% block script %}
+<script src="/js/passage.js"></script>
+{% endblock %}

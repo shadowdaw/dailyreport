@@ -1,0 +1,26 @@
+{% extends 'layout-report.html' %} {% block content %}
+<div class="container main">
+    <div class="markdown ">
+        {% for report in reports %}
+        <div class="passagedetails">
+        <span>日报:</span><span>{{moment(report.createDate).format('YYYY-MM-DD')}}</span>
+    </div>
+            <div class="report">
+                <code>今日完成:</code>
+                <p>
+                    {{report.done}}
+                </p>
+                <code>遇到困难:</code>
+                <p class="">
+                    {{report.difficulty}}
+                </p>
+                <code>个人成长:</code>
+                <p class="">
+                    {{report.progress}}
+                </p>
+            </div>
+        {%endfor%}
+    </div>
+</div>
+{% endblock %} {% block script %}
+<script src="/js/report.js"></script> {% endblock %}
