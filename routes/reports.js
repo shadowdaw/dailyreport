@@ -31,7 +31,7 @@ router.get('/', function(req, res, next) {
     }
     reportModel.find({
         'username': req.session.username
-    }).exec(function(err, docs) {
+    }).sort({createDate:-1}).exec(function(err, docs) {
         res.render('reports/reports', {
             reports: docs,
             title: 'My Reports'

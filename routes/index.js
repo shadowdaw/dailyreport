@@ -94,12 +94,6 @@ router.get('/session', function(req, res, next) {
 
     res.json(req.session);
 });
-router.post('/upload', upload.single('cover'), function(req, res, next) {
-    res.json({
-        msg: 'success',
-        file: req.file
-    });
-});
 
 
 module.exports = router;
