@@ -30,6 +30,11 @@ router.get('/login', function(req, res, next) {
 });
 
 
+router.get('/logout', function(req, res, next) {
+    req.session.username = null;
+    res.redirect('/login');
+});
+
 router.post('/doLogin', function(req, res, next) {
     userModel.findOne({
         'username': req.body.username
